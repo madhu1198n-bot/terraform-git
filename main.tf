@@ -1,0 +1,11 @@
+module "ec2_instance" {
+    source = "./create_ec2"
+    instance_type = var.instance_type
+    ami = var.ami
+    key_name = var.key_name
+}
+
+module "s3_bucket" {
+    source = "./create_s3"
+    bucket = "var.bucket"
+}

@@ -1,19 +1,24 @@
 variable "instance_type" {
-    description = "ec2 instance type"
-    type = string
+  description = "EC2 instance type (e.g. t2.micro)"
+  type        = string
 }
 
 variable "ami" {
-    description = "ami id for the instance"
-    type = string
+  description = "AMI ID for the EC2 instance"
+  type        = string
 }
 
 variable "key_name" {
-    description = "key name for the ec2 instance"
-    type = string
+  description = "Name for the AWS key pair (no .pem extension)"
+  type        = string
 }
 
 variable "bucket" {
-    description = "bucket name"
-    type = string
+  description = "S3 bucket name"
+  type        = string
+}
+
+variable "file_name" {
+  description = "Local path where the PEM file should be saved"
+  type        = string
 }

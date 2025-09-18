@@ -4,8 +4,3 @@ module "ec2_instance" {
     ami = var.ami
     key_name = var.key_name
 }
-
-module "s3_bucket" {
-    source = "./create_s3"
-    bucket = "var.bucket"
-}

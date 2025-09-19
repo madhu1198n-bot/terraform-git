@@ -9,3 +9,7 @@ module "create_ec2" {
     key_name = var.key_name
     ami = var.ami
 }
+
+module "create_dynamodb" {
+    source = "./create_dynamodb"
+}

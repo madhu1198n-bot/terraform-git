@@ -22,3 +22,23 @@ variable "file_name" {
   description = "Local path where the PEM file should be saved"
   type        = string
 }
+
+variable "source_path" {
+    type =string
+}
+
+variable "destinantion_path" {
+    type =string
+}
+
+variable "user_name" {
+    type = string
+}
+
+variable "private_key" {
+    type = string
+}
+
+variable "commands" {
+    type = list(string)
+}

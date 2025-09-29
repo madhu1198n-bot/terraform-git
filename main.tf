@@ -4,3 +4,9 @@ module "ec2_instance" {
     ami = var.ami
     key_name = var.key_name
 }
+# Dummy safe resource just to test Atlantis
+resource "null_resource" "atlantis_test" {
+  triggers = {
+    always_run = timestamp()
+  }
+}

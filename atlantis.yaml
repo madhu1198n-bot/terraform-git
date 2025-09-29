@@ -6,10 +6,3 @@ projects:
     autoplan:
       when_modified: ["*.tf", "*.tfvars"]
       enabled: true
-
-  - name: atlantis-test
-    dir: .
-    workspace: atlantis-test
-    autoplan:
-      when_modified: ["*.tf", "*.tfvars"]
-      enabled: true

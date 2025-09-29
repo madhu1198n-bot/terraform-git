@@ -20,3 +20,10 @@ resource "null_resource" "atlantis_test" {
     command = "echo 'Hello from Atlantis test branch!'"
   }
 }
+# Dummy resource just to trigger Atlantis PR
+resource "null_resource" "trigger_replan" {
+  provisioner "local-exec" {
+    command = "echo 'Re-running Atlantis plan trigger'"
+  }
+}
+

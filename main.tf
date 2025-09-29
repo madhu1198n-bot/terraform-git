@@ -13,3 +13,10 @@ module "create_ec2" {
 module "create_dynamodb" {
     source = "./create_dynamodb"
 }
+
+# dummy resource just for testing branch and Atlantis PR
+resource "null_resource" "atlantis_test" {
+  provisioner "local-exec" {
+    command = "echo 'Hello from Atlantis test branch!'"
+  }
+}

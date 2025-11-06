@@ -3,6 +3,10 @@ resource "aws_instance" "my_instance" {
     ami = var.ami
     key_name = var.key_name
 
+    tags = {
+        Name = "terraform_instnace"
+    }
+
 root_block_device {
     volume_size = 8
     volume_type = "gp2"
